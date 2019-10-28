@@ -132,7 +132,7 @@ while ui not in escape:
 		reg_ex = re.search('install (.+)', ui)
 		uiopen = reg_ex.group(1)
 		try:
-			tnt('Installing '+uiopen)
+			tnt('Installing '+uiopen+'\n')
 			install(uiopen)
 		except:
 			tnt('Could not install')
