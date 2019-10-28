@@ -233,8 +233,8 @@ def speakup(x):
 	global vmodule, speakers
 	if vmodule=='pyttsx3':
 		global engine
-		x1=tnt_helper(x,'talk')
-		engine.say(x1)
+		x=tnt_helper(x,'talk')
+		engine.say(x)
 		# Flush the say() queue and play the audio
 		engine.runAndWait()
 
