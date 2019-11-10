@@ -13,43 +13,50 @@ Vcode = "0.0.1.19.06.12"
 # If there is any error or you want to help please let me know.
 #e-mail: wwwqweasd147@gmail.com
 #*************************************************
+try:
+	if reloader==True:
+		reloaded=True
+except NameError:
+	reloaded=False
+	reloader=False
 
-func_ver=37
-from func_file37 import *
+func_ver='37'
+exec(open('func_file'+func_ver+'.py').read())
 
-uName = locker()
+if reloaded==False:
+	uName = locker()
 
-#install_req()
-uitimes=str(datetime.datetime.now())
-uinput="==========Code start on ("+uitimes+") Version:"+Vcode+"=========="
-uinput=str(uinput)+"\n"
-with open("Yui_data/RAM/uidb.txt", "a") as uinputdb:
-	uinputdb.write(uinput)
+	#install_req()
+	uitimes=str(datetime.datetime.now())
+	uinput="==========Code start on ("+uitimes+") Version:"+Vcode+"=========="
+	uinput=str(uinput)+"\n"
+	with open("Yui_data/RAM/uidb.txt", "a") as uinputdb:
+		uinputdb.write(uinput)
 
-sleep(1)
-wb="\nWelcome back! "
-timex= datetime.datetime.now()
-timex=timex.strftime("%H")
-timex=int(timex)
-if timex>=6 and timex<11:
-	outtxt="Good Morning, "+uName+wb
-elif timex>=16 and timex<18:
-	outtxt="Good after-noon, "+uName+wb
-elif timex>=18 or timex<6:
-	outtxt="Good evening, "+uName+wb
-else: outtxt= wb+uName
-tnt(outtxt)
-sleep(1)
-clean()
+		sleep(1)
+	wb="\nWelcome back! "
+	timex= datetime.datetime.now()
+	timex=timex.strftime("%H")
+	timex=int(timex)
+	if timex>=6 and timex<11:
+		outtxt="Good Morning, "+uName+wb
+	elif timex>=16 and timex<18:
+		outtxt="Good after-noon, "+uName+wb
+	elif timex>=18 or timex<6:
+		outtxt="Good evening, "+uName+wb
+	else: outtxt= wb+uName
+	tnt(outtxt)
+	sleep(1)
+	clean()
 
-ui=""
-uibit1=0
+	ui=""
+	uibit1=0
 
-outtxt="Hello, my name is "+aiName+".\n"
-outtxt+="My current version is: "+Vcode+"\n"
-outtxt+="Currently I can do some simple talk & things.\nAnd one more thing, please type 'exit' before exiting or closing for good.;) \n"
-#******uncomment following line******#
-#tnt(outtxt)
+	outtxt="Hello, my name is "+aiName+".\n"
+	outtxt+="My current version is: "+Vcode+"\n"
+	outtxt+="Currently I can do some simple talk & things.\nAnd one more thing, please type 'exit' before exiting or closing for good.;) \n"
+	#******uncomment following line******#
+	#tnt(outtxt)
 
 escape=["exit","close","shut down","quit","bye","stop","esc"]
 hellobit=1
@@ -196,10 +203,14 @@ while ui not in escape:
 			else:
 				find_person(uiopen)
 	elif ui in li_reload:
-		exec(open('func_file'+str(func_ver)+'.py').read())
-		print('done')
-	elif ui in escape:
+		exec(open('0-0-3-19-08-23'+'.py').read())
+		reloader=True
 		break
+	elif ui in escape:
+		reloaded=False
+		reloader=False
+		break
+
 	else:
 		outtxt="I can't understand that yet. I'm still learning.\nPlease type something that I understand:  "
 		tnt(outtxt)
@@ -211,14 +222,14 @@ while ui not in escape:
 		ui2=ui
 backup(ui)
 
-
-timex= datetime.datetime.now()
-timex=timex.strftime("%H")
-timex=int(timex)
-if timex>=18 or timex<6:
-	outtxt="Good night."
-else:outtxt=''
-outtxt+="\nBye! "
-if timex>=6 and timex<17:
-	outtxt+='\nHave a nice day!'
-tnt(outtxt)
+if reloaded==False and reloader==False:
+	timex= datetime.datetime.now()
+	timex=timex.strftime("%H")
+	timex=int(timex)
+	if timex>=18 or timex<6:
+		outtxt="Good night."
+	else:outtxt=''
+	outtxt+="\nBye! "
+	if timex>=6 and timex<17:
+		outtxt+='\nHave a nice day!'
+	tnt(outtxt)

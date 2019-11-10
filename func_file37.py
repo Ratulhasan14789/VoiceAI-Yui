@@ -213,7 +213,7 @@ def ins_n_imp_voice():
 				# Set properties _before_ you add things to say
 				engine.setProperty('rate', 190)
 				# Speed percent (can go over 100)
-				engine.setProperty('volume', 0.25)  # Volume 0-1
+				engine.setProperty('volume', 0.1)  # Volume 0-1
 				en_voice_id = "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-US_ZIRA_11.0"
 
 				# Use female English voice
