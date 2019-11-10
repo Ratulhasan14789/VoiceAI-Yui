@@ -8,10 +8,10 @@ if None==None:
 	from platform import system as os_name
 	from time import sleep,time as time_on
 	from threading import Thread
-	from conversation21 import *
+	exec(open('conversation21.py').read())
 	import sys
 	import re
-	from web_link import *
+	exec(open('web_link.py').read())
 	from hashlib import md5
 	from urllib.request import urlopen
 	import urllib.request #used to make requests
@@ -129,7 +129,7 @@ def ins_frm_imp(frm,imp,aas = ''):
 	finally :
 		if importbit==0:
 			globals()[aas] = getattr(__import__(frm, globals(), locals(), [imp], 0), imp)
-
+print(99)
 def ins_n_imp(pack, aas=''):
 	global importbit
 	"Install and import package"
@@ -386,6 +386,9 @@ def wikisearch(uix):
 				wikisearch(uix)
 			else:
 				tnt("Sorry I can't show you the results without wikipedia.\n")
+
+def find_person(txt):
+	tnt("Can't find him")
 
 def tell_time():
 	nowits=datetime.datetime.now()

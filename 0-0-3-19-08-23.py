@@ -14,7 +14,7 @@ Vcode = "0.0.1.19.06.12"
 #e-mail: wwwqweasd147@gmail.com
 #*************************************************
 
-
+func_ver=37
 from func_file37 import *
 
 uName = locker()
@@ -193,6 +193,11 @@ while ui not in escape:
 				tnt(random.choice(li_AamI)%aiName)
 			elif uiopen in li_Qcreator:
 				tnt(random.choice(li_Acreator)%random.choice(li_syn_created))
+			else:
+				find_person(uiopen)
+	elif ui in li_reload:
+		exec(open('func_file'+str(func_ver)+'.py').read())
+		print('done')
 	elif ui in escape:
 		break
 	else:

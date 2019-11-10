@@ -34,6 +34,7 @@ li_tell_time1=li_tell_time+['tell time','tell the time']
 li_tell_time2=['The time is ', "It's "]
 li_goto=('open','go to','goto')
 li_play=('play',)
+li_reload=('re','reload','11')
 li_can_do=li_goto+li_play
 works=["talk", "calculate"]
 yes=["y", "yes", "yeah", "sure", "ok", "lets go", "let's go", "start","yep","yeap"]
