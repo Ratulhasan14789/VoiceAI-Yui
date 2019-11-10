@@ -27,7 +27,7 @@ with open("Yui_data/RAM/uidb.txt", "a") as uinputdb:
 	uinputdb.write(uinput)
 
 sleep(1)
-wb="\nWelcome back!"
+wb="\nWelcome back! "
 timex= datetime.datetime.now()
 timex=timex.strftime("%H")
 timex=int(timex)
@@ -128,7 +128,6 @@ while ui not in escape:
 		tnt(outtxt)
 		FCyuiName()
 	elif ui.startswith('install '):
-		print(22)
 		reg_ex = re.search('install (.+)', ui)
 		uiopen = reg_ex.group(1)
 		try:
@@ -139,14 +138,32 @@ while ui not in escape:
 		else:
 			if check_installed(uiopen)==False:
 				tnt('Could not install')
-	elif ui.startswith(li_goto):
-		what=[i for i in li_whats if ui.startswith(i)==True]
-		reg_ex = re.search(what[0]+' (.+)', ui)
+	elif ui.startswith('upgrade '):
+		reg_ex = re.search('upgrade (.+)', ui)
 		uiopen = reg_ex.group(1)
-		if uiopen in links:
-			linker(uiopen)
-		else:
-			searcher(uiopen)
+		try:
+			tnt('Upgradeing '+uiopen+'\n')
+			upgrade(uiopen)
+			tnt('Upgrade complete.')
+		except:
+			tnt('Could not upgrade')
+	elif ui.startswith(li_can_do):
+		if ui.startswith(li_goto):
+			what=[i for i in li_goto if ui.startswith(i)==True]
+			reg_ex = re.search(what[0]+' (.+)', ui)
+			if reg_ex:
+				uiopen = reg_ex.group(1)
+				if uiopen in links:
+					linker(uiopen)
+				elif uiopen.startswith(url_google[1:]):
+					uiopen=[i for i in url_google[1:] if uiopen.startswith(i)][0]
+					reg_ex2=re.search(what[0]+' '+uiopen+' (.*)', ui)
+					if reg_ex2:
+						uiopen = reg_ex2.group(1)
+						if uiopen in googles:
+							googler(uiopen)
+				else:
+					searcher(uiopen)
 
 	elif ui in li_AmyName:
 		tnt(random.choice(li_AmyName)+uName+'.')
@@ -168,7 +185,6 @@ while ui not in escape:
 	elif ui.startswith(li_who):
 
 		who=[i for i in li_who if ui.startswith(i)==True]
-		print(who[0])
 		reg_ex = re.search(who[0]+' (.+)', ui)
 		if len(ui)!=len(who[0]) and reg_ex:
 			uiopen = reg_ex.group(1)

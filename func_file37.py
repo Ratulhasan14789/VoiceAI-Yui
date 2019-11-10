@@ -24,6 +24,11 @@ def check_installed(x):
 	found = spam_loader is not None
 	return found
 
+def get_version(package):
+	from pip._vendor import pkg_resources
+	package = package.lower()
+	return next((p.version for p in pkg_resources.working_set if p.project_name.lower() == package), "No match")
+
 def check_internet():
 	try:
 		response = urlopen('https://www.google.com/', timeout=10)
@@ -80,9 +85,8 @@ def install(pack):
 	if check_installed(pack)==True:
 		print('Already installed')
 	elif check_internet()==True:
-		try:
-			subprocess.call([sys.executable, "-m", "pip", "install", pack])
-		except:
+		subprocess.call([sys.executable, "-m", "pip", "install", pack])
+		if check_installed(pack)==False:
 			subprocess.call([sys.executable, "-m", "pip", "install",'--user', pack])
 	else:
 		print('Failed!')
@@ -99,7 +103,7 @@ def upgrade(pack):
 		except:
 			subprocess.call([sys.executable, "-m", "pip", "install","--upgrade",'--user', pack])
 	else:
-		print('Failed!')
+		print('Failed! \nPossible cause: No internet connection.\n')
 
 def ins_frm_imp(frm,imp,aas = ''):
 	if aas=='':
@@ -209,7 +213,7 @@ def ins_n_imp_voice():
 				# Set properties _before_ you add things to say
 				engine.setProperty('rate', 190)
 				# Speed percent (can go over 100)
-				engine.setProperty('volume', 1)  # Volume 0-1
+				engine.setProperty('volume', 0.25)  # Volume 0-1
 				en_voice_id = "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-US_ZIRA_11.0"
 
 				# Use female English voice
@@ -333,7 +337,6 @@ def edit_pdata(old,new):
 		udatanewfile.write(filedata)
 
 def asker():
-	from conversation2 import yes, no, condERR, cond
 	Ques2=input()
 	Ques2=Ques2.lower()
 	while Ques2 not in cond:
@@ -350,17 +353,17 @@ def wikisearch(uix):
 	if check_internet()==True and check_installed('wikipedia')==True:
 		import wikipedia
 		if uix in [i.lower() for i in wikipedia.search(uix)]:
-			tnt('\n'+wikipedia.summary(uix, sentences=5))
-			tnt('\nDo you want to know some more?')
+			tnt('\n'+wikipedia.summary(uix, sentences=4))
+			tnt('\nDo you want to know some more? ')
 			q=asker()
 			if q==True:
 				ny = wikipedia.page(uix)
 				web_go(ny.url)
 		elif wikipedia.search(uix)!=[]:
-			tnt('Did you mean '+ wikipedia.search(uix)[0]+'?')
+			tnt('Did you mean '+ wikipedia.search(uix)[0]+'? ')
 			q=asker()
 			if q==True:
-				tnt('\n'+wikipedia.summary(wikipedia.search(uix)[0], sentences=5))
+				tnt('\n'+wikipedia.summary(wikipedia.search(uix)[0], sentences=4))
 				tnt('\nDo you want to know some more?  ')
 				q=asker()
 				if q==True:

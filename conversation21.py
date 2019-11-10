@@ -32,7 +32,9 @@ for x in li_do_u_know2:
 li_tell_time=['time','the time','current time']
 li_tell_time1=li_tell_time+['tell time','tell the time']
 li_tell_time2=['The time is ', "It's "]
-li_goto=('open ','go to','goto')
+li_goto=('open','go to','goto')
+li_play=('play',)
+li_can_do=li_goto+li_play
 works=["talk", "calculate"]
 yes=["y", "yes", "yeah", "sure", "ok", "lets go", "let's go", "start","yep","yeap"]
 yes2=yes1=yes
