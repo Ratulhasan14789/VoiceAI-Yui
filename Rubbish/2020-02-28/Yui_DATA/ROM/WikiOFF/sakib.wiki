@@ -1,0 +1,14 @@
+data= """/_/+Sakib=/
+Sakib ( (listen); Arabic: ساكب‎ pronounced [saːkb]), is a city in northwestern Jordan, administratively part of Jerash Governorate. The 2015 census recorded its population as 11,586. The town is situated approximately 6 miles (9.7 km) west of the city of Jerash and 34 miles (55 km) from Amman city centre.
+
+
+== Etymology ==
+Sakib was known as "Seecip" during the Crusade. The Arabic place-name means "flowing water"
+
+
+== History ==
+
+
+=== Roman and Byzantine periods ===
+Archaeological remains such as Trapetum olive presses and ancient aqueducts indicate that Sakib was inhabited during the Roman era."""
+link= """https://en.wikipedia.org/wiki/Sakib"""

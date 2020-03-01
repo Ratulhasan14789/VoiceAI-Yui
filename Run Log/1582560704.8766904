@@ -1,0 +1,4 @@
+from os import getcwd
+print(getcwd())
+cwd='/storage/emulated/0/MEGA/MEGA Downloads/Python/Run Log'
+print(mainpyfile)

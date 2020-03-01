@@ -28,13 +28,16 @@ polit_url='http://feeds.bbci.co.uk/news/video_and_audio/politics/rss.xml'
 entertain_url='http://feeds.bbci.co.uk/news/video_and_audio/entertainment_and_arts/rss.xml'
 health_url='http://feeds.bbci.co.uk/news/video_and_audio/health/rss.xml'
 
-data = RE.urlopen (Asia_url).read()
-print(data)
+data = RE.urlopen (tech_url).read()
+#print(data)
 tree = ET.fromstring(data)
+x=data.find(b'lastBuildDate')+14
+lastupdate=data[x:x+29].decode('utf-8')
 
-print ('This are the latest News at the BBC:\n')
+print ('\nThis are the latest News at the BBC:\n(updated on:%s)'%lastupdate)
 
 for i in tree.iter('item'):
+	#print(i)
 	news= '\033[1;37;40m\033[4;37;40m{}:\n\033[0;37;40m{}\n'.format(i.find('title').text, i.find('description').text)
 	#if bbc_bit<5:
 	"""	global typer,speakers

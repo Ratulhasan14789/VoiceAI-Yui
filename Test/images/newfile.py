@@ -44,14 +44,3 @@ def load(a,b):
 
 #https://i.nhentai.net/galleries/471851/1.jpg
 #load(10,50)
-
-import pyttsx3
-engine = pyttsx3.init()
-voices = engine.getProperty('voices')
-for voice in voices:
-    print(voice, voice.id)
-    engine.setProperty('voice', voice.id)
-    engine.say("Hello World!")
-    engine.runAndWait()
-    engine.stop()
-    print(voice)

@@ -1,0 +1,5 @@
+data= """/_/+Quran=/
+The Quran ( kor-AHN; Arabic: القرآن‎, romanized: al-Qurʼān Arabic pronunciation: [alqur'ʔaːn], literally meaning "the recitation"), also romanized Qur'an or Koran, is the central religious text of Islam, which Muslims believe to be a revelation from God (Allah). It is widely regarded as the finest work in classical Arabic literature. Slightly shorter than the New Testament, it is organized in 114 chapters (Arabic: سورة sūrah, plural سور suwar) — not according to  when they were revealed (nor by subject matter), but according to length of surahs (with some exceptions) under the guidance of divine
+revelation. Surah are subdivided into verses (Arabic: آية āyah, plural آيات āyāt).
+Muslims believe that the Quran was orally revealed by God to the final Prophet, Muhammad, through the archangel Gabriel (Jibril), incrementally over a period of some 23 years, beginning on 22 December 609 CE, when Muhammad was 40, and concluding in 632, the year of his death."""
+link= "https://en.wikipedia.org/wiki/Quran"
