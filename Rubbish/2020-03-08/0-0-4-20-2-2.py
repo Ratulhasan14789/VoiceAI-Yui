@@ -323,17 +323,18 @@ def tnt_helper(text,bit=0):
 def slowtype(txt, y=0.02):
 	x1=tnt_helper(txt,'type')
 	if re.search('/s([\d\.]*)/', x1):
-		x2=re.split('/s[\d\.]*/',x1)
+		x2=re.split('/s([\d\.]*)/',x1)
 		x3=re.findall('/s([\d\.]*)/',x1)
 		for i in x2:
 			for j in i:
 				print(j, end="", flush="True")
 				sleep(y)
-			#try:
-			time=x3[x2.index(i)]
-			sleep(float(time) if time!=None else 1)
-			#except:
-			#	pass
+			try:
+				xxx=x3[x2.index(i)]
+				time=re.search('/s([(\d|\f|\.)]*)/', xxx).group(1)
+				sleep(float(time) if time!=None else 1)
+			except:
+				pass
 	else:
 		for i in x1:
 			print(i, end="", flush="True")
@@ -501,8 +502,6 @@ def ins_n_imp_voice():
 	NoVoiceError="\n \n|*Warning! Voice won't work\n\033*|"
 	if os_name()=='Windows':
 		try:
-			if not check_installed('pywin32'):
-				install('pywin32')
 			ins_n_imp('pyttsx3')
 			vmodule='pyttsx3'
 			global engine
@@ -565,14 +564,14 @@ def tnt(text,speed=0.02):
 	slowtyper(text,speed)
 	if talk_aloud==True:
 		if re.search('/s([\d\.]*)/', text):
-			x2=re.split('/s[\d\.]*/',text)
+			x2=re.split('/s([\d\.]*)/',text)
 			x3=re.findall('/s([\d\.]*)/',text)
 			for i in x2:
 				speakup(i)
 				try:
-					time=x3[x2.index(i)]
-
-					sleep(float(time) if time!=None else 1)
+					xxx=x3[x2.index(i)]
+					time=re.search('/s([\d\.]*)/', xxx).group(1)
+					sleep(int(time) if time!=None else 1)
 				except:
 					pass
 		else:
@@ -915,8 +914,7 @@ while ui not in escape:
 			elif uiopen in ["latest news","news update"]:
 				if check_internet():
 					from bbc_news import task
-
-					tnt(task(bbc_topic))
+					print(task(bbc_topic))
 				else:
 					tnt('No internet!')
 

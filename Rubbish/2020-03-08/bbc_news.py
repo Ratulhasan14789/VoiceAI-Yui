@@ -6,7 +6,7 @@ https://www.sololearn.com/learn/1099/?ref=app
 '''
 import urllib.request as RE
 import xml.etree.ElementTree as ET
-import re
+
 bbc_bit=0
 bbc_topics={
 "Asia_url":'http://feeds.bbci.co.uk/news/world/asia/rss.xml',
@@ -42,7 +42,7 @@ def tnt_helper(text):
 	text=text.replace('/bu/','\033[1;37;40m\033[4;37;40m')  #Brightlight+Underline
 	text=text.replace('/hu/','\033[0;37;40m\033[4;30;43m')  #Highlight+Underline
 	text=text.replace('/=/','\033[0;37;40m')
-	text=re.sub('/s([\d\.]*)/','',text)
+
 	return text
 
 def news_report(x):
@@ -59,7 +59,8 @@ def news_report(x):
 		#print(i)
 		news= '/bu/{}:/=/\n{}\n'.format(i.find('title').text, i.find('description').text)
 
-		report+=news+"/s5/"+'\n'
+		report+=news+"/s/"
+		report+='\n'
 	return report
 #print(__name__)
 def task(Topic):
