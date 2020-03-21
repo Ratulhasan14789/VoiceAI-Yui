@@ -1,0 +1,8 @@
+#To run a code inside a code just import.
+#other file must be in the same directory
+#don't add .py'
+#see https://stackoverflow.com/questions/50805075/run-python-script-from-another-python-script-in-windows-python-3-6-5
+#
+#example:
+    
+import nod

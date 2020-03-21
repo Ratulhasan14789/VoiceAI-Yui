@@ -1,8 +1,0 @@
-data= """/_/+H=/
-H (named aitch  or, regionally, haitch , plural aitches) is the eighth letter in the ISO basic Latin alphabet.
-
-
-== History ==
-The original Semitic letter Heth most likely represented the voiceless pharyngeal fricative (ħ). The form of the letter probably stood for a fence or posts.
-The Greek eta 'Η' in Archaic Greek alphabets still represented /h/ (later on it came to represent a long vowel, /ɛː/). In this context, the letter eta is also known as heta to underline this fact."""
-link= """https://en.wikipedia.org/wiki/H"""

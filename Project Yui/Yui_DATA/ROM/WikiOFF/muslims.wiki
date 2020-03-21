@@ -1,7 +1,0 @@
-data= """/_/+Muslims=/
-Muslims are people who follow or practice Islam, a monotheistic Abrahamic religion. Muslims consider the Quran, their holy book, to be the verbatim word of God as revealed to the Islamic prophet and messenger Muhammad. The majority of Muslims also follow the teachings and practices of Muhammad (sunnah) as recorded in traditional accounts (hadith). "Muslim" is an Arabic word meaning "submitter" (to God).The beliefs of Muslims include: that God (Arabic: الله‎ Allāh) is eternal, transcendent and absolutely one (tawhid); that God is incomparable, self-sustaining and neither begets nor was begotten; that Islam is the complete and universal version of a primordial faith that has been revealed before through many prophets including Abraham, Ishmael, Isaac, Moses, and Jesus; that these previous messages and revelations have been partially changed or corrupted over time (tahrif) and that the Quran is the final unaltered revelation from God (Final Testament).
-
-
-== Qualifier ==
-The religious practices of Muslims are enumerated in the Five Pillars of Islam: the declaration of faith (shahadah), daily prayers (salat), fasting during the month of Ramadan (sawm), almsgiving (zakat), and the pilgrimage to Mecca (hajj) at least once in a lifetime.To become a Muslim and to convert to Islam, it is essential to utter the Shahada, one of the Five Pillars of Islam, a declaration of faith and trust that professes that there is only one God (Allah) and that Muhammad is God's messenger."""
-link= """https://en.wikipedia.org/wiki/Muslims"""

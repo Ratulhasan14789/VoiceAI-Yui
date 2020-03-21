@@ -20,7 +20,7 @@ def triangle():
             break
     end_fill()
     done()
-    
+
 def hexagon():
     begin_fill()
     while True:
@@ -30,7 +30,7 @@ def hexagon():
             break
     end_fill()
     done()
-    
+
 def line():
     begin_fill()
     while True:
@@ -40,7 +40,7 @@ def line():
             break
     end_fill()
     done()
-    
+
 def square():
     begin_fill()
     while True:
@@ -59,6 +59,36 @@ while True:
 end_fill()
 done()"""
 #hexagon()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#oops
+
+
+
+
 def convex_poly(n):
     x=90-180/n
     begin_fill()
@@ -69,8 +99,8 @@ def convex_poly(n):
             break
     end_fill()
     done()
-    
+
 #####################
 #just put the number of gons in the pqrentesis
 #####################
-convex_poly(5)
+convex_poly(8)

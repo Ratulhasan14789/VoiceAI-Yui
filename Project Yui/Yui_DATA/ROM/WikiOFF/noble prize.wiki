@@ -1,4 +1,0 @@
-data= """/_/+Nobel Prize=/
-The Nobel Prize (, Swedish pronunciation: [nʊˈbɛlː]; Swedish definite form, singular: Nobelpriset; Norwegian: Nobelprisen) is a set of annual international awards bestowed in several categories by Swedish and Norwegian institutions in recognition of academic, cultural, or scientific advances.
-The will of the Swedish chemist, engineer and industrialist Alfred Nobel established the five Nobel prizes in 1895. The prizes in Chemistry, Literature, Peace, Physics, and Physiology or Medicine were first awarded in 1901. The prizes are widely regarded as the most prestigious awards available in their respective fields.In 1968, Sweden's central bank Sveriges Riksbank established the Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel. The award is based on a donation received by the Nobel Foundation in 1968 from Sveriges Riksbank on the occasion of the bank’s 300th anniversary."""
-link= "https://en.wikipedia.org/wiki/Nobel_Prize"

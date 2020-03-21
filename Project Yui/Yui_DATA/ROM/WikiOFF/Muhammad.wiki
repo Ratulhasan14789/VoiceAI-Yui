@@ -1,3 +1,0 @@
-data= """/_/+Muhammad=/
-Muhammad (Arabic: مُحمّد‎, pronounced [muħammad];  c. 570 CE – 8 June 632 CE) was an Arab religious, social and political leader and the founder of Islam. According to Islamic doctrine, he was a prophet, sent to present and confirm the monotheistic teachings preached previously by Adam, Abraham, Moses, Jesus, and other prophets. He is viewed as the final prophet of God in all the main branches of Islam, though some modern denominations diverge from this belief. Muhammad united Arabia into a single Muslim polity, with the Quran as well as his teachings and practices forming the basis of Islamic religious belief."""
-link= """https://en.wikipedia.org/wiki/Muhammad"""
